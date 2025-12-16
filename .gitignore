@@ -1,0 +1,45 @@
+# Ignorar dependências do Composer
+/vendor/
+
+# Ignorar arquivo de ambiente
+.env
+
+# Ignorar logs
+storage/logs/*.log
+
+# Ignorar cache
+storage/cache/*
+!storage/cache/.gitkeep
+
+# Ignorar uploads
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Ignorar sessões
+storage/sessions/*
+!storage/sessions/.gitkeep
+
+# Ignorar arquivos temporários
+storage/temp/*
+!storage/temp/.gitkeep
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos do IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar arquivos de backup
+*.bak
+*.backup
+
+# Ignorar node_modules se houver integração com frontend
+node_modules/
+
+# Ignorar arquivos de build
+/build/
+/dist/
