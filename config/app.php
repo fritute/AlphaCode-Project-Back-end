@@ -10,7 +10,7 @@ return [
     'key' => $_ENV['APP_KEY'] ?? 'your-secret-key-here',
     
     'cors' => [
-        'allowed_origins' => explode(',', $_ENV['CORS_ALLOWED_ORIGINS'] ?? 'http://localhost:3000,http://localhost:5173'),
+        'allowed_origins' => explode(',', $_ENV['CORS_ALLOWED_ORIGINS'] ?? '*'),
         'allowed_methods' => ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
         'allowed_headers' => ['Content-Type', 'Authorization', 'X-Requested-With'],
         'allow_credentials' => true,
