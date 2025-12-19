@@ -103,7 +103,7 @@ GET /api/contatos/ano/1990
 - `email`: Formato válido e único  
 - `data_nascimento`: Formato YYYY-MM-DD
 - `profissao`: Texto livre
-- `telefone_contato`: Exatamente 8 dígitos
+- `telefone_contato`: Exatamente 10 dígitos
 - `celular_contato`: Exatamente 11 dígitos
 
 ### Campos opcionais (PUT):

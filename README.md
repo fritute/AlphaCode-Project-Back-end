@@ -8,7 +8,7 @@ API REST para gerenciamento de contatos desenvolvida em PHP com arquitetura MVC.
 - PHP 7.4 ou superior
 - MySQL/MariaDB
 - Composer
-- Servidor web (Apache/Nginx) ou PHP built-in server
+
 
 ### 1. Clone o repositório
 ```bash
@@ -45,7 +45,7 @@ CREATE TABLE tbl_contatos(
     email varchar(300) NOT NULL,
     data_nascimento date NOT NULL,
     profissao varchar(100) NOT NULL,
-    telefone_contato varchar(8) NOT NULL,
+    telefone_contato varchar(10) NOT NULL,
     celular_contato varchar(11) NOT NULL
 );
 ```
@@ -159,7 +159,7 @@ GET /api/contatos/ano/1990
 - `email`: Formato válido e único
 - `data_nascimento`: Formato YYYY-MM-DD
 - `profissao`: Texto livre
-- `telefone_contato`: Exatamente 8 dígitos
+- `telefone_contato`: Exatamente 10 dígitos
 - `celular_contato`: Exatamente 11 dígitos
 
 #### Campos opcionais (PUT):
@@ -179,7 +179,7 @@ Todos os campos podem ser atualizados individualmente.
         "email": "joao@example.com",
         "data_nascimento": "1990-05-15",
         "profissao": "Desenvolvedor",
-        "telefone_contato": "33334444",
+        "telefone_contato": "3333334444",
         "celular_contato": "11999998888"
     }
 }
@@ -193,7 +193,7 @@ Todos os campos podem ser atualizados individualmente.
     "timestamp": "2025-12-17 10:30:00",
     "errors": {
         "email": "Email já está em uso",
-        "telefone_contato": "Telefone deve ter 8 dígitos"
+        "telefone_contato": "Telefone deve ter 10 dígitos"
     }
 }
 ```
@@ -282,7 +282,7 @@ back-end/
    ```env
    DB_HOST=localhost
    DB_PORT=3306
-   DB_NAME=alphacode_db
+   DB_NAME=alpha_code_contatos
    DB_USERNAME=seu_usuario
    DB_PASSWORD=sua_senha
    ```
@@ -337,12 +337,3 @@ Os logs são salvos em `storage/logs/`:
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT.
-
----
-
-**Desenvolvido com ❤️ para o projeto AlphaCode**#   A l p h a C o d e - P r o j e c t - B a c k - e n d 
- 
- 

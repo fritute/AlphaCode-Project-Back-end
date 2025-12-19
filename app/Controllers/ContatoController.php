@@ -234,11 +234,11 @@ class ContatoController extends BaseController
             $errors['profissao'] = 'Profissão é obrigatória';
         }
         
-        // Telefone contato (8 dígitos)
+        // Telefone contato (10 dígitos)
         if ($isRequired && empty($data['telefone_contato'])) {
             $errors['telefone_contato'] = 'Telefone de contato é obrigatório';
-        } elseif (isset($data['telefone_contato']) && !preg_match('/^\d{8}$/', $data['telefone_contato'])) {
-            $errors['telefone_contato'] = 'Telefone deve ter exatamente 8 dígitos';
+        } elseif (isset($data['telefone_contato']) && !preg_match('/^\d{10}$/', $data['telefone_contato'])) {
+            $errors['telefone_contato'] = 'Telefone deve ter exatamente 10 dígitos';
         }
         
         // Celular contato (11 dígitos)
